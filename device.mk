@@ -19,6 +19,8 @@
 #
 # Everything in this directory will become public
 
+# gapps stuffs
+GAPPS_VARIANT:=nano
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/moto/shamu-kernel/zImage-dtb
@@ -342,6 +344,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, hardware/qcom/msm8x84/msm8x84.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x84/msm8x84-gpu-vendor.mk)
+
+# gapps stuffs
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
