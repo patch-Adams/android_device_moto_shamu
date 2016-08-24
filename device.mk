@@ -391,3 +391,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Low latency audio buffer size in frames
 PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.period_size=192
+
+# build libxml2 from source
+PRODUCT_PACKAGES += \
+libxml2
