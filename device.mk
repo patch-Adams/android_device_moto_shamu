@@ -20,7 +20,7 @@
 # Everything in this directory will become public
 
 # gapps stuffs
-GAPPS_VARIANT:=nano
+GAPPS_VARIANT:=pico
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/moto/shamu-kernel/zImage-dtb
